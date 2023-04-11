@@ -3,6 +3,7 @@
 namespace Illuminate\Log;
 
 use Closure;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Monolog\Formatter\LineFormatter;
@@ -69,7 +70,7 @@ class LogManager implements LoggerInterface
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @return void
      */
-    public function __construct($app)
+    public function __construct(Application $app)
     {
         $this->app = $app;
     }
